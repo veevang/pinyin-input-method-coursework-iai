@@ -1,0 +1,53 @@
+程序运行方式：
+本程序分为三个文件编写，所有程序均在src文件夹下。环境为windows11+python3.9。
+preprocessing：直接使用python运行即可，无命令行参数，使用前需要先将sina_news_gbk文件夹放在data文件夹下，如文件结构中所示。其功能为产生预处理结果，包括仅包含一二级汉字的拼音-字符文件，三张字/词数目表，三张字/词频率表，位于src文件夹下，具体的功能可见实验报告。
+main：python main.py ../data/input.txt ../data/output.txt。其功能为将置于“../data/input.txt”文件中的拼音进行处理，转化为“../data/output.txt”文件中的输出句子。
+postprocessing：python postprocessing.py ../data/std_output.txt ../data/output.txt。其功能为比对生成的输出句子与参考答案之间的差别，以计算准确率。准确率输出到“../log/accuracy.txt”文件中。
+
+文件结构：
+code/
+    README.txt
+    .idea/
+        .gitignore
+        .name
+        code.iml
+        deployment.xml
+        encodings.xml
+        misc.xml
+        modules.xml
+        workspace.xml
+        inspectionProfiles/
+            profiles_settings.xml
+    data/
+        character.txt
+        input.txt
+        output.txt
+        pinyin_character.txt
+        std_output.txt
+        sina_news_gbk/
+            2016-02.txt
+            2016-04.txt
+            2016-05.txt
+            2016-06.txt
+            2016-07.txt
+            2016-08.txt
+            2016-09.txt
+            2016-10.txt
+            2016-11.txt
+            README.txt
+    log/
+        accuracy.txt
+    src/
+        beginning_char_count_table.json
+        beginning_char_frequency_table.json
+        char_count_table.json
+        char_frequency_table.json
+        frequency_table.json
+        main.py
+        pinyin_character.json
+        postprocessing.py
+        preprocessing.py
+        two_char_word_count_table.json
+        two_char_word_frequency_table.json
+        __pycache__/
+            preprocessing.cpython-39.pyc

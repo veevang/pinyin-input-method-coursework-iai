@@ -1,0 +1,2 @@
+char accuracy: 0.8341929321872015
+sentence accuracy: 0.36926147704590817
